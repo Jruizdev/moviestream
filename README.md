@@ -1,0 +1,2 @@
+# Proyecto MovieStream
+Es un proyecto web que hace uso de la API de "The Movie DataBase" para consultar las películas en tendencia de la semana, y la información de prácticamente cualquier película; presentándola de forma personalizada en el sitio web. Para la programación back-end se utilizó el lenguaje PHP y el diseño del sitio web fue realizado mediante CSS personalizado.

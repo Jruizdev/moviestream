@@ -1,0 +1,298 @@
+:root {
+	--color-fondo: #353839;
+	--color-primario: black;
+	--color-secundario: #19C0D1;
+	--color-secundario-hover: #009EC4;
+	--color-secundario-disabled: #94dbff;
+	--color-navbar: #000000C2;
+	--color-text-primario: white;
+	--color-text-secundario: #5c5c5c;
+	--fuente-principal: 'Helvetica';
+}
+
+body {
+	background-image: linear-gradient(to bottom left, var(--color-fondo), var(--color-primario));
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+	font-family: var(--fuente-principal);
+	color: var(--color-text-primario);
+}
+body a {
+	text-decoration: none;
+	color: var(--color-text-primario);
+}
+footer {
+	text-align: center;
+	margin-top: 50px;
+	padding-bottom: 30px;
+	background-color: var(--color-primario);
+}
+
+
+/*	BARRA DE NAVEGACIÓN	*/
+.nav-bar {
+	background-color: var(--color-navbar);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.nav-bar .contenedor {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-inline: 10%;
+	margin: 20px 0;
+}
+.nav-bar .item {
+	align-self: center;
+}
+.nav-bar input[type=text] {
+	padding: 6px 12px;
+	float: left;
+	border: none;
+	font-size: 17px;
+	border-radius: 10px 0 0 10px;
+}
+.nav-bar button {
+	float: right;
+  	padding: 6px 10px;
+  	background: var(--color-secundario);
+  	font-size: 17px;
+  	border: none;
+  	cursor: pointer;
+  	border-radius: 0 10px 10px 0;
+  	color: var(--color-text-primario);
+}
+.nav-bar button:hover {
+	background: var(--color-secundario-hover);
+}
+.nav-bar button:disabled {
+	background: var(--color-secundario-disabled);
+	cursor: not-allowed;
+}
+.nav-bar .titulo {
+	font-size: 30px;
+	font-weight: bold;
+}
+.nav-bar .titulo .mayus {
+	font-size: 38px;
+}
+.nav-bar .titulo .resaltar {
+	color: var(--color-secundario);
+}
+
+
+/* CONTENEDORES */
+.contenedor-principal {
+	margin: 100px 50px 0 50px;
+	min-height: 58vh;
+	display: flex;
+	flex-direction: column;
+}
+.contenedor-principal .titulo {
+	text-align: left;
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	border-radius: 20px;
+	text-align: center;
+	color: var(--color-text-secundario);
+}
+.contenedor-principal .titulo b {
+	color: var(--color-text-primario);
+}
+.contenedor-principal .titulo .resaltar {
+	color: var(--color-secundario);
+}
+.contenedor-principal .msg-pagina {
+	margin-top: 50px;
+	text-align: center;
+}
+.contenedor-peliculas {
+	display: grid;
+	gap: 1.5rem;
+	text-align: center;
+	justify-items: center;
+	grid-template-columns: repeat(5, 1fr);
+}
+.contenedor-peliculas .pelicula {
+	max-width: 200px;
+	height: 100%;
+	overflow: auto;
+	background: var(--color-primario);
+	border-radius: 10px;
+	box-shadow: 0 10px 10px 0 var(--color-primario);
+	border-width: 20px;
+	border-color: var(--color-secundario);
+}
+.contenedor-peliculas .pelicula h3 {
+	font-weight: normal;
+	color: var(--color-text-primario);
+}
+.contenedor-peliculas .pelicula span {
+	font-weight: normal;
+	color: var(--color-secundario);
+}
+.contenedor-peliculas .pelicula .rate {
+	padding: 0 10px;
+}
+.contenedor-peliculas .pelicula .portada {
+	max-width: 200px;
+}
+.contenedor-peliculas .pelicula .titulo {
+	text-transform: none;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 20px;
+	padding: 10px;
+	max-height: 3ch;
+	-webkit-box-orient: vertical;
+  	display: -webkit-box;
+  	-webkit-line-clamp: 2;
+  	overflow: hidden;
+}
+
+
+/* DETALLES DE LAS PELÍCULAS  */
+.detalles-pelicula {
+	text-align: left;
+	justify-content: center;
+	background-color: var(--color-primario);
+	border-radius: 10px;
+	padding: 50px;
+	box-shadow: 0 10px 10px 0 var(--color-primario);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.detalles-pelicula .informacion {
+	max-width: 100%;
+	padding: 0 50px 50px 50px;
+}
+.detalles-pelicula .poster {
+	max-width: 100%;
+	border-radius: 10px;
+}
+.detalles-pelicula b {
+	color: var(--color-secundario);
+}
+.detalles-pelicula h3,
+.detalles-pelicula h4 {
+	font-weight: normal;
+}
+.detalles-pelicula button {
+	font-family: var(--fuente-principal);
+	border-color: var(--color-secundario);
+	background-color: var(--color-primario);
+	color: var(--color-text-primario);
+	border-radius: 20px;
+	padding: 10px 50px;
+	font-size: 1em;
+}
+.detalles-pelicula button:hover {
+	background-color: var(--color-secundario-hover);
+}
+.detalles-pelicula h4 span {
+	color: var(--color-secundario);
+}
+
+
+/* ELEMEMNTOS DE PAGINACIÓN */
+.paginacion {
+	text-align: center;
+	margin-top: 50px;
+	padding: 10px 0;
+}
+.paginacion .item {
+	background-color: var(--color-fondo);
+	padding: 10px;
+	margin: 3px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+.paginacion .actual {
+	background-color: var(--color-secundario);
+}
+.paginacion .selector {
+	padding-inline: 30px;
+}
+
+
+/*	ELEMENTOS DE ATRIBUCIÓN	*/
+.attr-logo {
+	width: 150px;
+}
+.leyenda {
+	padding: 30px;
+	color: var(--color-text-secundario);
+}
+.atribucion {
+	color: var(--color-text-secundario);
+	padding-top: 30px;
+}
+
+
+/* CONFIGURACIÓN PARA LAS DIFERENTES RESOLUCIONES DE PANTALLA */
+@media (min-width: 1100px) {
+	.detalles-pelicula {
+		justify-content: left;
+	}
+	.detalles-pelicula .informacion {
+		max-width: 50%;
+	}
+}
+@media (max-width: 1100px) {
+	.contenedor-peliculas {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.detalles-pelicula {
+		text-align: center;
+	}
+}
+@media (max-width: 900px) {
+	.contenedor-peliculas {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media (max-width: 750px) {
+	.contenedor-principal {
+		margin: 150px 50px 0 50px;
+	}
+	.nav-bar .contenedor {
+		justify-content: center;
+		margin: 5px;
+	}
+	.nav-bar .item {
+		margin: 10px 10px;
+		min-width: 276px;
+		text-align: center;
+	}
+	.contenedor-peliculas {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.detalles-pelicula {
+		min-width: 200px;
+	}
+	.detalles-pelicula button {
+		min-width: 100%;
+	}
+}
+@media (max-width: 500px) {
+	.contenedor-peliculas {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.contenedor-peliculas .pelicula {
+		max-width: 300px;
+		width: 300px;
+	}
+	.contenedor-peliculas .pelicula .portada {
+		max-width: 300px;
+	}
+	.detalles-pelicula {
+		padding: 5px;
+	}
+}
